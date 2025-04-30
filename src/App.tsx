@@ -39,12 +39,12 @@ function App() {
             <div className="flex justify-center gap-6 mb-12">
               <SocialLink
                 icon={<Github />}
-                href="https://github.com/asitshakya789"
+                href="https://github.com/Asit-14"
                 label="GitHub"
               />
               <SocialLink
                 icon={<Linkedin />}
-                href="https://linkedin.com/in/asit14"
+                href="https://www.linkedin.com/in/asit14/"
                 label="LinkedIn"
               />
               <SocialLink
@@ -59,7 +59,7 @@ function App() {
               />
               <SocialLink
                 icon={<Code2 />}
-                href="https://leetcode.com/u/asitshakya789/"
+                href="https://leetcode.com/u/Asit-14/"
                 label="LeetCode"
               />
               <SocialLink
