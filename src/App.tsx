@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import profilePic from "../public/pic.png";
+
 import { Github, Linkedin, Instagram, Code2, Mail, ExternalLink, BookOpen, Trophy, Cpu, GraduationCap, User, Terminal, Globe, Database, PenTool as Tool } from 'lucide-react';
 
 function App() {
@@ -25,7 +27,7 @@ function App() {
             <div className="mb-8 relative">
               <div className="absolute inset-0 animate-pulse bg-blue-500 rounded-full blur-xl opacity-20"></div>
               <img
-                src="./public/pic.png"
+                src={profilePic}
                 alt="Profile"
                 className="w-40 h-40 rounded-full mx-auto border-4 border-blue-500 object-cover animate-float shadow-2xl"
               />
