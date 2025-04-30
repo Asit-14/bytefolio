@@ -25,7 +25,7 @@ function App() {
             <div className="mb-8 relative">
               <div className="absolute inset-0 animate-pulse bg-blue-500 rounded-full blur-xl opacity-20"></div>
               <img
-                src="pic.png"
+                src="./public/pic.png"
                 alt="Profile"
                 className="w-40 h-40 rounded-full mx-auto border-4 border-blue-500 object-cover animate-float shadow-2xl"
               />

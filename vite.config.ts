@@ -1,11 +1,11 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/bytefolio/', // use your actual repo name
   plugins: [react()],
-  base :"/bytefolio",
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
-});
+})
