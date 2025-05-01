@@ -1,14 +1,40 @@
-import React, { useEffect, useState } from 'react';
-import profilePic from "../public/pic.png";
+import { Download } from 'lucide-react' // Make sure you import the icon
+import React, { useEffect, useState } from 'react'
+import profilePic from '../public/pic.png'
+import { Typewriter } from 'react-simple-typewriter'
 
-import { Github, Linkedin, Instagram, Code2, Mail, ExternalLink, BookOpen, Trophy, Cpu, GraduationCap, User, Terminal, Globe, Database, PenTool as Tool } from 'lucide-react';
+
+
+;<SocialLink
+  icon={<Download />}
+  href="/Asit_Kumar_Resume.pdf" // Replace with your actual resume path
+  label="Download Resume"
+/>
+
+import {
+  BookOpen,
+  Code2,
+  Cpu,
+  Database,
+  ExternalLink,
+  Github,
+  Globe,
+  GraduationCap,
+  Instagram,
+  Linkedin,
+  Mail,
+  Terminal,
+  PenTool as Tool,
+  Trophy,
+  User,
+} from 'lucide-react'
 
 function App() {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
-    setIsVisible(true);
-  }, []);
+    setIsVisible(true)
+  }, [])
 
   return (
     <div className="min-h-screen bg-[#0a192f] text-white">
@@ -70,8 +96,27 @@ function App() {
                 label="Email"
               />
             </div>
-            <div className="flex justify-center">
-              <Terminal className="w-16 h-16 text-blue-500 animate-bounce" />
+            <div className="text-center mt-8 text-2xl text-blue-400 font-mono">
+              <Typewriter
+                words={['eat();', 'sleep();', 'code();', 'repeat();']}
+                loop={0}
+                cursor
+                cursorStyle="_"
+                typeSpeed={80}
+                deleteSpeed={50}
+                delaySpeed={1000}
+              />
+            </div>
+
+            <div className="flex justify-center mt-6">
+              <a
+                href="https://drive.google.com/file/d/14xeod8fOsoQxHhwqJiwN2zfZdPEJjRkn/view?usp=sharing"
+                download
+                className="inline-flex items-center gap-2 px-6 py-3 bg-blue-500 text-white rounded-xl shadow-lg hover:bg-blue-600 transition-all duration-300"
+              >
+                <Download className="w-5 h-5" />
+                Download Resume
+              </a>
             </div>
           </div>
         </div>
@@ -150,7 +195,6 @@ function App() {
                 { name: 'Java', level: 90 },
                 { name: 'C++/C', level: 80 },
                 { name: 'Python', level: 75 },
-                { name: 'JavaScript', level: 70 },
               ]}
             />
             <SkillCategory
@@ -159,7 +203,7 @@ function App() {
               skills={[
                 { name: 'Node.js', level: 80 },
                 { name: 'Express.js', level: 75 },
-                { name: 'React', level: 70 },
+                { name: 'Spring Boot', level: 70 },
                 { name: 'HTML/CSS/JavaScript', level: 70 },
               ]}
             />
@@ -169,17 +213,15 @@ function App() {
               skills={[
                 { name: 'MySQL', level: 85 },
                 { name: 'MongoDB', level: 70 },
-                { name: 'PostgreSQL', level: 50 },
               ]}
             />
             <SkillCategory
               icon={<Tool />}
               title="Tools & Others"
               skills={[
-                { name: 'Git', level: 90 },
-                { name: 'Linux', level: 70 },
+                { name: 'Git & GitHub', level: 90 },
+                { name: 'VScode', level: 70 },
                 { name: 'AWS', level: 70 },
-                { name: 'Docker', level: 60 },
               ]}
             />
           </div>
@@ -192,23 +234,53 @@ function App() {
           <SectionTitle icon={<BookOpen />} title="Featured Projects" />
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
             <ProjectCard
+              title="DevTinder – Developer Matchmaking Platform"
+              description="DevTinder is a unique developer matchmaking platform inspired by Tinder, designed to foster meaningful collaboration. Users can swipe to discover like-minded developers, share innovative ideas, and team up on projects — all with real-time chat and seamless interactions."
+              tech={['Node.js', 'Express.js', 'React.js', 'MongoDB']}
+              link="https://github.com/Asit-14/devTinder"
+              image="devtinder.png"
+            />
+            <ProjectCard
               title="Real-Time Face Recognition"
               description=" face recognition using OpenCV and face_recognition libraries. The script captures real-time video from a camera, detects faces in the stream, and compares them with previously loaded images to identify known faces."
               tech={['Python', 'OpenCV', 'TensorFlow', 'face_recognition']}
-              link="https://github.com/asitshakya789/Face-Recognition-project"
+              link="https://github.com/Asit-14/Face-Recognition-project"
               image="download.jpeg"
             />
             <ProjectCard
               title="Chatup! Real-Time Chat Application"
               description=" Chatup, a powerful and intuitive real-time chat application that allows users to connect, communicate, and collaborate seamlessly. This README will guide you through the installation process, provide an overview of the application, and help you get started quickly."
               tech={['Node.js', 'MongoDB', 'Socket-io', 'Express.js']}
-              link="https://github.com/asitshakya789/ChatUp"
+              link="https://github.com/Asit-14/ChatUp"
               image="chat.png"
             />
           </div>
         </div>
       </section>
 
+      {/* Certifications Section */}
+      <section className="py-12 bg-[#0e1f39]">
+        <div className="container mx-auto px-4">
+          <SectionTitle icon={<Trophy />} title="Certifications" />
+          <div className="max-w-4xl mx-auto space-y-6">
+            <Achievement
+              icon={<Trophy />}
+              title="Full Stack Web Development"
+              description="Completed Full Stack Web Development Certification from Udemy."
+            />
+            <Achievement
+              icon={<Trophy />}
+              title="Google Cloud Essentials"
+              description="Earned Google Cloud Digital Leader Essentials Certificate."
+            />
+            <Achievement
+              icon={<Trophy />}
+              title="Java Programming"
+              description="Certified in Java Programming from HackerRank."
+            />
+          </div>
+        </div>
+      </section>
       {/* Achievements Section */}
       <section className="py-32 relative">
         <div className="container mx-auto px-4">
@@ -217,13 +289,8 @@ function App() {
             <Achievement
               icon={<Code2 />}
               title="Competitive Programming"
-              description="• Solved 200+ DSA problems on GeeksforGeeks  and Leetcode "
+              description="• Solved 200+ DSA problems on GeeksforGeeks and Leetcode"
             />
-            {/* <Achievement
-              icon={<Trophy />}
-              title="Hackathons & Competitions"
-              description="1st Place in National Blockchain Hackathon 2023 • Runner-up at Microsoft Imagine Cup Regional Finals • Best Innovation Award at Smart India Hackathon"
-            /> */}
           </div>
         </div>
       </section>
@@ -232,7 +299,7 @@ function App() {
       <footer className="py-12 bg-[#0a192f]">
         <div className="container mx-auto px-4 text-center">
           <p className="text-gray-400 mb-4">
-            © 2024 Asitkumar. All rights reserved.
+            © 2024 Asit kumar. All rights reserved.
           </p>
           <p className="text-blue-400">
             Made with ❤️ using React & TailwindCSS
@@ -243,7 +310,15 @@ function App() {
   )
 }
 
-function SocialLink({ icon, href, label }: { icon: React.ReactNode; href: string; label: string }) {
+function SocialLink({
+  icon,
+  href,
+  label,
+}: {
+  icon: React.ReactNode
+  href: string
+  label: string
+}) {
   return (
     <a
       href={href}
@@ -260,16 +335,22 @@ function SocialLink({ icon, href, label }: { icon: React.ReactNode; href: string
         {label}
       </span>
     </a>
-  );
+  )
 }
 
-function SectionTitle({ icon, title }: { icon: React.ReactNode; title: string }) {
+function SectionTitle({
+  icon,
+  title,
+}: {
+  icon: React.ReactNode
+  title: string
+}) {
   return (
     <div className="flex flex-col items-center mb-16">
       <span className="text-blue-500 mb-4">{icon}</span>
       <h2 className="text-4xl font-bold gradient-text">{title}</h2>
     </div>
-  );
+  )
 }
 
 function StatCard({ number, label }: { number: string; label: string }) {
@@ -278,17 +359,17 @@ function StatCard({ number, label }: { number: string; label: string }) {
       <p className="text-3xl font-bold text-blue-400 mb-2">{number}</p>
       <p className="text-gray-400">{label}</p>
     </div>
-  );
+  )
 }
 
-function SkillCategory({ 
+function SkillCategory({
   icon,
-  title, 
-  skills 
-}: { 
-  icon: React.ReactNode;
-  title: string; 
-  skills: { name: string; level: number }[] 
+  title,
+  skills,
+}: {
+  icon: React.ReactNode
+  title: string
+  skills: { name: string; level: number }[]
 }) {
   return (
     <div className="glass-card rounded-2xl p-8 shadow-2xl">
@@ -304,8 +385,8 @@ function SkillCategory({
               <span className="text-blue-400">{skill.level}%</span>
             </div>
             <div className="w-full bg-gray-700 rounded-full h-2">
-              <div 
-                className="bg-blue-500 h-2 rounded-full skill-progress" 
+              <div
+                className="bg-blue-500 h-2 rounded-full skill-progress"
                 style={{ width: `${skill.level}%` }}
               ></div>
             </div>
@@ -313,7 +394,7 @@ function SkillCategory({
         ))}
       </div>
     </div>
-  );
+  )
 }
 
 function ProjectCard({
@@ -321,13 +402,13 @@ function ProjectCard({
   description,
   tech,
   link,
-  image
+  image,
 }: {
-  title: string;
-  description: string;
-  tech: string[];
-  link: string;
-  image: string;
+  title: string
+  description: string
+  tech: string[]
+  link: string
+  image: string
 }) {
   return (
     <div className="glass-card rounded-2xl overflow-hidden shadow-2xl group">
@@ -364,10 +445,18 @@ function ProjectCard({
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-function Achievement({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
+function Achievement({
+  icon,
+  title,
+  description,
+}: {
+  icon: React.ReactNode
+  title: string
+  description: string
+}) {
   return (
     <div className="glass-card rounded-2xl p-8 shadow-2xl">
       <div className="flex items-start gap-6">
@@ -380,7 +469,7 @@ function Achievement({ icon, title, description }: { icon: React.ReactNode; titl
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
