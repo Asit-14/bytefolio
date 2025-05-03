@@ -110,8 +110,9 @@ function App() {
 
             <div className="flex justify-center mt-6">
               <a
-                href="https://drive.google.com/file/d/14xeod8fOsoQxHhwqJiwN2zfZdPEJjRkn/view?usp=sharing"
-                download
+                href="https://docs.google.com/document/d/1MEVUvbbD6eTzYTXtfzgctwesUkQRbzYX/edit?usp=sharing&ouid=109267504248183831983&rtpof=true&sd=true"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-blue-500 text-white rounded-xl shadow-lg hover:bg-blue-600 transition-all duration-300"
               >
                 <Download className="w-5 h-5" />
@@ -258,7 +259,7 @@ function App() {
         </div>
       </section>
 
-      {/* Certifications Section */}
+      {/* Certifications Section
       <section className="py-12 bg-[#0e1f39]">
         <div className="container mx-auto px-4">
           <SectionTitle icon={<Trophy />} title="Certifications" />
@@ -280,7 +281,7 @@ function App() {
             />
           </div>
         </div>
-      </section>
+      </section> */}
       {/* Achievements Section */}
       <section className="py-32 relative">
         <div className="container mx-auto px-4">
@@ -290,6 +291,13 @@ function App() {
               icon={<Code2 />}
               title="Competitive Programming"
               description="• Solved 200+ DSA problems on GeeksforGeeks and Leetcode"
+            />
+          </div>
+          <div className="max-w-4xl mx-auto space-y-6">
+            <Achievement
+              icon={<Code2 />}
+              title="Open Source"
+              description="• : Contributed to 3+ repositories during Hacktoberfest 2024 on GitHub"
             />
           </div>
         </div>
