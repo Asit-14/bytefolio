@@ -130,16 +130,29 @@ function App() {
           <div className="max-w-4xl mx-auto glass-card rounded-2xl p-8 shadow-2xl">
             <p className="text-xl leading-relaxed text-gray-300">
               Hey! I’m a third-year B.Tech CSE student with a strong passion for
-              software development and emerging tech. I enjoy solving complex
-              problems, building cool projects, and continuously learning new
-              things. Technology is always evolving, and I love keeping up with
-              it, pushing myself to grow as a developer. Excited for the journey
-              ahead!
+              software development and emerging technologies. I enjoy solving
+              complex problems, building cool projects, and constantly learning
+              new things. Technology is always evolving, and I love staying
+              up-to-date, challenging myself to grow as a developer. I'm excited
+              for the journey ahead!
+              <br />
+              <br />
+              I’m proficient in programming languages like Java, Python, C++,
+              and C. I have a strong interest in problem-solving and regularly
+              practice on platforms like LeetCode and GeeksforGeeks to sharpen
+              my skills. Currently, I’m focused on backend development using
+              Node.js, where I’m learning how things work behind the scenes and
+              how to design efficient APIs.
+              <br />
+              <br />I also have some experience working with Spring Boot and the
+              Spring Framework. Right now, I’m working on a backend project
+              called <strong>DevTinder</strong>.
             </p>
+
             <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-              {/* <StatCard number="15+" label="Projects Completed" /> */}
-              {/* <StatCard number="200+" label="DSA Problems Solved" /> */}
-              {/* <StatCard number="3" label="Hackathons Won" /> */}
+              <StatCard number="3+" label="Projects Completed" />
+              <StatCard number="400+" label="DSA Problems Solved" />
+              <StatCard number="3" label="Contribution" />
             </div>
           </div>
         </div>
@@ -165,7 +178,7 @@ function App() {
                   <p className="text-gray-400 mt-2">2022 - 2026</p>
                   <div className="mt-4">
                     <div className="flex items-center gap-2 mb-2">
-                      <span className="text-gray-300">Current CGPA:</span>
+                      <span className="text-gray-300">Current SGPA:</span>
                       <span className="text-blue-400 font-bold text-xl">
                         7.5
                       </span>
@@ -194,7 +207,7 @@ function App() {
               title="Programming Languages"
               skills={[
                 { name: 'Java', level: 90 },
-                { name: 'C++/C', level: 80 },
+                { name: 'C++/C', level: 70 },
                 { name: 'Python', level: 75 },
               ]}
             />
@@ -222,7 +235,6 @@ function App() {
               skills={[
                 { name: 'Git & GitHub', level: 90 },
                 { name: 'VScode', level: 70 },
-                { name: 'AWS', level: 70 },
               ]}
             />
           </div>
@@ -244,13 +256,19 @@ function App() {
             <ProjectCard
               title="Real-Time Face Recognition"
               description=" face recognition using OpenCV and face_recognition libraries. The script captures real-time video from a camera, detects faces in the stream, and compares them with previously loaded images to identify known faces."
-              tech={['Python', 'OpenCV', 'TensorFlow', 'face_recognition']}
+              tech={[
+                'Python',
+                'OpenCV',
+                'TensorFlow',
+                'face_recognition',
+                'CNN',
+              ]}
               link="https://github.com/Asit-14/Face-Recognition-project"
               image="download.jpeg"
             />
             <ProjectCard
               title="Chatup! Real-Time Chat Application"
-              description=" Chatup, a powerful and intuitive real-time chat application that allows users to connect, communicate, and collaborate seamlessly. This README will guide you through the installation process, provide an overview of the application, and help you get started quickly."
+              description=" Chatup, a powerful and intuitive real-time chat application that allows users to connect, communicate, and collaborate seamlessly.we"
               tech={['Node.js', 'MongoDB', 'Socket-io', 'Express.js']}
               link="https://github.com/Asit-14/ChatUp"
               image="chat.png"
@@ -259,7 +277,7 @@ function App() {
         </div>
       </section>
 
-      {/* Certifications Section
+      {/* Certifications Section */}
       <section className="py-12 bg-[#0e1f39]">
         <div className="container mx-auto px-4">
           <SectionTitle icon={<Trophy />} title="Certifications" />
@@ -267,37 +285,39 @@ function App() {
             <Achievement
               icon={<Trophy />}
               title="Full Stack Web Development"
-              description="Completed Full Stack Web Development Certification from Udemy."
+              description="Completed a Full Stack Web Development certification course on Udemy."
             />
             <Achievement
               icon={<Trophy />}
-              title="Google Cloud Essentials"
-              description="Earned Google Cloud Digital Leader Essentials Certificate."
+              title="Python Bootcamp"
+              description="Completed a Python Bootcamp certification course on Udemy."
             />
             <Achievement
               icon={<Trophy />}
               title="Java Programming"
-              description="Certified in Java Programming from HackerRank."
+              description="Earned a Java Programming certificate from HackerRank."
             />
           </div>
         </div>
-      </section> */}
+      </section>
       {/* Achievements Section */}
       <section className="py-32 relative">
         <div className="container mx-auto px-4">
           <SectionTitle icon={<Trophy />} title="Achievements" />
+
           <div className="max-w-4xl mx-auto space-y-6">
             <Achievement
               icon={<Code2 />}
               title="Competitive Programming"
-              description="• Solved 200+ DSA problems on GeeksforGeeks and Leetcode"
+              description="Solved 200+ DSA problems on GeeksforGeeks and LeetCode."
             />
           </div>
-          <div className="max-w-4xl mx-auto space-y-6">
+
+          <div className="max-w-4xl mx-auto space-y-6 mt-8">
             <Achievement
               icon={<Code2 />}
               title="Open Source"
-              description="• : Contributed to 3+ repositories during Hacktoberfest 2024 on GitHub"
+              description="Contributed to 3+ repositories during Hacktoberfest 2024 on GitHub."
             />
           </div>
         </div>
