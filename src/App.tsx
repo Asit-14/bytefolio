@@ -35,6 +35,14 @@ function App() {
   useEffect(() => {
     setIsVisible(true)
   }, [])
+  const [visitorCount, setVisitorCount] = useState(0)
+
+  useEffect(() => {
+    fetch('https://api.countapi.xyz/hit/asitkumar.dev/visits')
+      .then((res) => res.json())
+      .then((data) => setVisitorCount(data.value))
+  }, [])
+
 
   return (
     <div className="min-h-screen bg-[#0a192f] text-white">
@@ -322,6 +330,14 @@ function App() {
           </div>
         </div>
       </section>
+      <div className="flex justify-center mt-2 animate-fadeIn">
+        <p className="text-gray-400 hover:text-gray-200 transition-all duration-300">
+          Total Visitors:{' '}
+          <span className="text-blue-400 font-semibold hover:text-blue-500 transform hover:scale-110 transition-all duration-300">
+            {visitorCount}
+          </span>
+        </p>
+      </div>
 
       {/* Footer */}
       <footer className="py-12 bg-[#0a192f]">
@@ -365,6 +381,7 @@ function SocialLink({
     </a>
   )
 }
+
 
 function SectionTitle({
   icon,
