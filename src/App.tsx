@@ -137,7 +137,7 @@ function App() {
           <SectionTitle icon={<User />} title="About Me" />
           <div className="max-w-4xl mx-auto glass-card rounded-2xl p-8 shadow-2xl">
             <p className="text-xl leading-relaxed text-gray-300">
-              Hey! I’m a third-year B.Tech CSE student with a strong passion for
+              Hey! I’m a fourth-year B.Tech CSE student with a strong passion for
               software development and emerging technologies. I enjoy solving
               complex problems, building cool projects, and constantly learning
               new things. Technology is always evolving, and I love staying
