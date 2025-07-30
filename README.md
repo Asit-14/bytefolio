@@ -281,9 +281,9 @@ This portfolio is optimized for performance:
 I'd love to hear from you! Whether you have questions, suggestions, or just want to say hi:
 
 - **🌐 Portfolio:** [https://asit-14.github.io/bytefolio/](https://asit-14.github.io/bytefolio/)
-- **💼 LinkedIn:** [Your LinkedIn Profile](https://linkedin.com/in/your-profile)
+- **💼 LinkedIn:** [Your LinkedIn Profile](https://linkedin.com/in/asit14)
 - **🐙 GitHub:** [https://github.com/Asit-14](https://github.com/Asit-14)
-- **📧 Email:** [your-email@example.com](mailto:your-email@example.com)
+- **📧 Email:** [your-email@example.com](mailto:asitshakya789@gmail.com)
 - **🐦 Twitter:** [@your-handle](https://twitter.com/your-handle)
 
 ### **🏆 Coding Profiles**
