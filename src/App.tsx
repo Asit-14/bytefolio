@@ -176,28 +176,45 @@ function App() {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                {/* Download Resume Button */}
                 <a
-                  href="/bytefolio/Asit Resume.docx.pdf"
-                  download="Asit_Kumar_Resume.pdf"
+                  href="https://docs.google.com/document/d/1MEVUvbbD6eTzYTXtfzgctwesUkQRbzYX/edit?usp=sharing&ouid=109267504248183831983&rtpof=true&sd=true"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={`flex items-center gap-3 justify-center px-6 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105 ${isDarkMode
-                    ? 'bg-blue-600 hover:bg-blue-700 text-white border-2 border-blue-400'
-                    : 'bg-soft-coral hover:bg-dusty-rose text-white border-2 border-soft-coral'
+                      ? 'bg-blue-600 hover:bg-blue-700 text-white border-2 border-blue-400'
+                      : 'bg-soft-coral hover:bg-dusty-rose text-white border-2 border-soft-coral'
                     }`}
                 >
                   <Download className="w-5 h-5" />
                   Download Resume
                 </a>
+
+                {/* Get In Touch Button */}
                 <a
                   href="#contact"
                   className={`flex items-center gap-3 justify-center px-6 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105 border-2 ${isDarkMode
-                    ? 'bg-transparent hover:bg-blue-600/20 text-blue-400 border-blue-400 hover:border-blue-300'
-                    : 'bg-transparent hover:bg-soft-coral/20 text-soft-coral border-soft-coral hover:border-dusty-rose'
+                      ? 'bg-transparent hover:bg-blue-600/20 text-blue-400 border-blue-400 hover:border-blue-300'
+                      : 'bg-transparent hover:bg-soft-coral/20 text-soft-coral border-soft-coral hover:border-dusty-rose'
                     }`}
                 >
                   <Mail className="w-5 h-5" />
                   Get In Touch
                 </a>
               </div>
+
+              {/* 📄 Embedded Resume Viewer
+              <div className="w-full h-[800px] mt-10 shadow-xl rounded-xl overflow-hidden border border-gray-200">
+                <iframe
+                  src="https://docs.google.com/document/d/1MEVUvbbD6eTzYTXtfzgctwesUkQRbzYX/edit?usp=sharing&ouid=109267504248183831983&rtpof=true&sd=true"
+                  width="100%"
+                  height="100%"
+                  allow="autoplay"
+                  style={{ border: 'none' }}
+                  title="Asit Kumar Resume"
+                ></iframe>
+              </div> */}
+
 
               {/* Social Links */}
               <div className="flex gap-4 justify-center lg:justify-start">
