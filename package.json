@@ -1,14 +1,15 @@
 {
   "name": "vite-react-typescript-starter",
-  "homepage": "https://asit-14.github.io/bytefolio/",
+  "homepage": "https://asit-14.github.io/bytefolio/",  // ✅ This must match your repo and GitHub username
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "dev": "vite",                                      // 👉 Start local dev server
+    "build": "vite build",                              // 👉 Build site for production (outputs to /dist)
+    "preview": "vite preview",                          // 👉 Preview production build locally
+    "predeploy": "npm run build",                       // ✅ Auto run build before deploy
+    "deploy": "gh-pages -d dist"                        // ✅ Deploys contents of /dist to GitHub Pages
   },
   "dependencies": {
     "axios": "^1.9.0",
@@ -26,7 +27,7 @@
     "eslint": "^9.9.1",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.11",
-    "gh-pages": "^6.3.0",
+    "gh-pages": "^6.3.0",                               // ✅ Required for deployment
     "globals": "^15.9.0",
     "postcss": "^8.5.3",
     "tailwindcss": "^3.4.17",
